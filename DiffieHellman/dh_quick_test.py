@@ -34,5 +34,5 @@ print_line()
 s1 = pow(A, b, prime)
 s2 = pow(B, a, prime)
 
-if(s1 == s2):
+if s1==s2:
     print "Shared secrets match: ", s1

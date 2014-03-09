@@ -54,10 +54,14 @@ class DiffieHellman(object):
         return self.sharedKey
 
 
+
+## MAIN
+##
 if __name__=="__main__":
     
     if 'secure_random' in locals():
         print "Commencing with DiffieHellman test."
+        print 60 * "-"
         person1 = DiffieHellman()
         person2 = DiffieHellman()
         
@@ -65,6 +69,8 @@ if __name__=="__main__":
         person2.genSharedKey( person1.publicKey )
     
         if( person1.sharedKey==person2.sharedKey ):
+            print "Prime length: ", len(str(person1.prime))
+            print 60 * "-"
             print "Shared key's match..."
             print 60 * "-"
             print "PERSON 1"
